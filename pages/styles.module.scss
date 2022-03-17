@@ -1,0 +1,59 @@
+$desktop-font-size: 4.7vw;
+
+.main {
+    padding: 24px;
+}
+.main__text {
+    font-size: $desktop-font-size;
+    color: #04060f;
+    margin: 0;
+    font-weight: 700;
+}
+.main__text__img {
+    display: inline-block;
+    height: 0.9em;
+    vertical-align: baseline;
+}
+.main__title {
+    font-size: $desktop-font-size;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 700;
+}
+
+.main__footer {
+    padding-top: 10vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin footer_text($font-size) {
+    font-size: $font-size;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main__footer__dont_be_shy {
+    @include footer_text(5em);
+}
+
+.main__email {
+    @include footer_text(5em);
+}
+
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+    .main__empty {
+        height: 50vh;
+    }
+    .main__footer__dont_be_shy {
+        @include footer_text(2em);
+    }
+
+    .main__email {
+        @include footer_text(1.8em);
+        margin-top: 5vh;
+        margin-bottom: 50vh;
+    }
+}

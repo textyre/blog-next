@@ -1,0 +1,73 @@
+@mixin img {
+  display: inline-block;
+  position: absolute;
+}
+
+.ozon_card {
+  background-color: #005BFF;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 60px 0px rgba(0, 91, 255, 0.6);
+  }
+}
+
+.ozon_logo {
+  display: block;
+  filter:  brightness(0) invert(1);
+  width: 20vw;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.goose {
+  @include img;
+  width: 7%;
+  top: 20%;
+  left: 20%;
+  transform: rotate(-10deg);
+}
+
+.komandu {
+  @include img;
+  width: 15%;
+  float: right;
+  top: 50%;
+  right: 10%;
+}
+
+.feature {
+  @include img;
+  width: 30%;
+  bottom: 15%;
+  left: 10%;
+  transform: rotate(3deg);
+}
+
+.uvolen {
+  @include img;
+  float: right;
+  width: 10%;
+  top: 16%;
+  right: 25%;
+  transform: rotate(-5deg);
+}
+
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+  .goose {
+    width: 10%;
+  }
+  .uvolen {
+    width: 20%;
+  }
+  .feature {
+    width: 50%;
+  }
+  .komandu {
+    width: 25%;
+  }
+}
