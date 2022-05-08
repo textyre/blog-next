@@ -9,3 +9,12 @@ body {
     box-sizing: border-box;
 }
 
+:root {
+    --shadow-color: 286deg 36% 67%;
+    --shadow-card:
+            0px 8.1px 10px rgba(212, 95, 147, 0.1),
+            0px 80px 80px rgba(41, 24, 62, 0.2);
+    --border-radius-m: 20px;
+    --border-radius-l: 40px;
+}
+

@@ -1,0 +1,48 @@
+@use 'src/variables';
+@use 'src/media';
+
+.main__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    margin: 24px;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@mixin footer_text($font-size) {
+    font-size: $font-size;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main__footer__dont_be_shy {
+    @include footer_text(3vw);
+}
+
+.main__email {
+    @include footer_text(3vw);
+}
+
+@include media.for-mobiles {
+    .main__footer {
+        padding: 0;
+        margin: 12px;
+        background-color: unset;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .main__footer__dont_be_shy,
+    .main__email {
+        font-size: 7vw;
+        width: 100%;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding: 0 12px 0 12px;
+    }
+}

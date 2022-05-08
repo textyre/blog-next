@@ -1,4 +1,4 @@
-declare module '*.svg' {
-    const ReactComponent: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
-    export default ReactComponent;
-}
+// declare module '*.svg' {
+//     const ReactComponent: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+//     export default ReactComponent;
+// }
