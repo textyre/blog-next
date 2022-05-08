@@ -1,7 +1,30 @@
 {
-  "extends": "next/core-web-vitals",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "rules": {
     "indent": ["error", 2],
-    "semi": "error"
-  }
+    "semi": "error",
+    "max-len": ["error", { "code": 80, "ignoreUrls": true }],
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "import", "next": "function" },
+      { "blankLine": "always", "prev": "import", "next": "const" }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["next.config.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 }

@@ -1,0 +1,212 @@
+@use 'src/variables';
+
+.card_company {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5em;
+    border: 3px solid whitesmoke;
+    border-radius: 1.5em;
+    width: 400px;
+    height: 500px;
+    transition: border-color 0.2s ease, transform 0.5s ease, background-image 0.3s ease;
+    cursor: pointer;
+
+    &:nth-child(3n + 1) {
+        justify-self: flex-start;
+    }
+
+    &:nth-child(3n) {
+        justify-self: flex-end;
+    }
+
+
+    &.undefined_company {
+        font-size: 2em;
+        text-align: center;
+        justify-content: center;
+        color: rgba(170, 170, 170, 0.8)
+    }
+
+    &:hover {
+        border-color: white;
+        transform: scale(0.98);
+
+        & .images_companies {
+            filter: saturate(1);
+            opacity: 1;
+        }
+
+        & .skill {
+            background-color: white;
+            border-color: white;
+        }
+
+        & .work_experience {
+            color: white;
+        }
+
+        &.ozon {
+            background-image: linear-gradient(
+                            45deg,
+                            hsl(219deg 100% 95%) 0%,
+                            hsl(219deg 100% 94%) 11%,
+                            hsl(219deg 100% 93%) 22%,
+                            hsl(219deg 100% 92%) 33%,
+                            hsl(219deg 100% 92%) 44%,
+                            hsl(219deg 100% 91%) 56%,
+                            hsl(219deg 100% 90%) 67%,
+                            hsl(219deg 100% 89%) 78%,
+                            hsl(219deg 100% 88%) 89%,
+                            hsl(219deg 100% 87%) 100%
+            );
+        }
+
+        &.cs_money {
+            background-image: linear-gradient(
+                            45deg,
+                            hsl(217deg 100% 97%) 0%,
+                            hsl(220deg 100% 95%) 14%,
+                            hsl(228deg 100% 95%) 29%,
+                            hsl(242deg 100% 94%) 43%,
+                            hsl(259deg 100% 93%) 57%,
+                            hsl(274deg 100% 91%) 71%,
+                            hsl(287deg 100% 89%) 86%,
+                            hsl(298deg 100% 87%) 100%
+            );
+        }
+
+        &.nnl {
+            background-image: linear-gradient(
+                            45deg,
+                            hsl(0deg 62% 87%) 0%,
+                            hsl(0deg 63% 87%) 1%,
+                            hsl(359deg 67% 87%) 2%,
+                            hsl(359deg 67% 87%) 3%,
+                            hsl(358deg 71% 87%) 5%,
+                            hsl(358deg 71% 86%) 6%,
+                            hsl(357deg 74% 86%) 8%,
+                            hsl(357deg 75% 86%) 10%,
+                            hsl(356deg 78% 86%) 12%,
+                            hsl(355deg 78% 85%) 15%,
+                            hsl(355deg 81% 85%) 18%,
+                            hsl(354deg 82% 85%) 21%,
+                            hsl(354deg 84% 85%) 26%,
+                            hsl(353deg 85% 85%) 31%,
+                            hsl(352deg 87% 85%) 38%,
+                            hsl(352deg 90% 85%) 47%,
+                            hsl(352deg 90% 84%) 58%,
+                            hsl(351deg 93% 84%) 71%,
+                            hsl(350deg 95% 84%) 81%,
+                            hsl(350deg 98% 84%) 89%,
+                            hsl(349deg 98% 83%) 95%,
+                            hsl(349deg 100% 83%) 100%
+            );
+        }
+
+        &.slotex {
+            background-image: linear-gradient(
+                            45deg,
+                            hsl(203deg 40% 90%) 0%,
+                            hsl(201deg 50% 90%) 4%,
+                            hsl(199deg 61% 90%) 10%,
+                            hsl(196deg 68% 90%) 20%,
+                            hsl(194deg 80% 90%) 38%,
+                            hsl(192deg 92% 91%) 76%,
+                            hsl(189deg 100% 91%) 100%
+            );
+        }
+
+        &.undefined_company {
+            color: rgba(20, 20, 55, 0.8);
+            background-image: linear-gradient(
+                            45deg,
+                            hsl(200deg 37% 97%) 0%,
+                            hsl(197deg 47% 97%) 7%,
+                            hsl(198deg 71% 97%) 20%,
+                            hsl(191deg 85% 97%) 55%,
+                            hsl(190deg 100% 98%) 100%
+            );
+        }
+    }
+}
+
+.work_experience {
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    color: rgb(170, 170, 170, 0.8);
+}
+
+.companies_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: flex-start;
+    max-width: 1440px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 6em;
+}
+
+.images_companies {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    filter: saturate(0);
+    opacity: 0.5;
+    width: 150px;
+
+    &.nnl {
+        width: 127px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .companies_cards {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4vw;
+    }
+
+    .card_company {
+        &:nth-child(2n + 1) {
+            justify-self: flex-end;
+        }
+
+        &:nth-child(2n) {
+            justify-self: flex-start;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .companies_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2vw;
+    }
+
+    .card_company {
+        width: 100%;
+        height: fit-content;
+        min-height: 350px;
+
+        &.undefined_company {
+            font-size: 6vw;
+        }
+    }
+
+    .images_companies {
+        width: 100px;
+        &.nnl {
+            width: 67px;
+        }
+    }
+
+    .work_experience {
+        font-size: 5vw;
+    }
+}

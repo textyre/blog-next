@@ -1,0 +1,178 @@
+.skill_container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-left: 1em;
+    padding-right: 1em;
+    justify-content: flex-start;
+}
+
+$typescript-color: #82c0cc;
+$graphql-color: #f88dad;
+$react-color: #292f36;
+$redux-color: #aa7bc3;
+$centrifugo-color: #aa9aba;
+$vanilla-color: #fac748;
+$oop-color: #2f131e;
+$vue-color: #80b918;
+$amcharts-color: #62b6cb;
+$lifecycle-color: #006494;
+$postcss-color: #362417;
+$websockets-color: #555b6e;
+$scss-color: #f694c1;
+$webpack-color: #9dc7c8;
+$solid-color: #292f36;
+$patterns-color: #0e0e52;
+$electron-color: #5fa8d3;
+$nodejs-color: #55a630;
+$formik-color: #16697a;
+$webstorm-color: #292f36;
+
+.skill_item {
+    font-size: 4.4vw;
+    flex: 1;
+    height: fit-content;
+    white-space: nowrap;
+    justify-content: center;
+
+    &:hover {
+        color: white;
+        border-color: white;
+        &.typescript {
+            background-color: $typescript-color;
+        }
+        &.graphql {
+            background-color: $graphql-color;
+        }
+        &.react {
+            background-color: $react-color;
+        }
+        &.redux {
+            background-color: $redux-color;
+        }
+        &.centrifugo {
+            background-color: $centrifugo-color;
+        }
+        &.vanilla {
+            background-color: $vanilla-color;
+        }
+        &.oop {
+            background-color: $oop-color;
+        }
+        &.vue {
+            background-color: $vue-color;
+        }
+        &.vuex {
+            background-color: $vue-color;
+        }
+        &.amcharts {
+            background-color: $amcharts-color;
+        }
+        &.lifecycle {
+            background-color: $lifecycle-color;
+        }
+        &.postcss {
+            background-color: $postcss-color;
+        }
+        &.websockets {
+            background-color: $websockets-color;
+        }
+        &.scss {
+            background-color: $scss-color;
+        }
+        &.webpack {
+            background-color: $webpack-color;
+        }
+        &.solid {
+            background-color: $solid-color;
+        }
+        &.patterns {
+            background-color: $patterns-color;
+        }
+        &.electron {
+            background-color: $electron-color;
+        }
+        &.nodejs {
+            background-color: $nodejs-color;
+        }
+        &.formik {
+            background-color: $formik-color;
+        }
+        &.webstorm {
+            background-color: $webstorm-color;
+        }
+    }
+}
+
+@mixin skill($anim, $color, $time, $delay: 0s) {
+    animation: #{$anim} #{$time} ease alternate-reverse infinite #{$delay};
+    @keyframes #{$anim} {
+        0% {
+            background-color: unset;
+            border-color: whitesmoke;
+        }
+
+        75% {
+            background-color: unset;
+            color: unset;
+            border-color: whitesmoke;
+        }
+
+        90% {
+            color: white;
+        }
+
+        100% {
+            color: white;
+            background-color: $color;
+            border-color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    .skill_item {
+        font-size: 7vw;
+        &.typescript {
+            @include skill('typescript', $typescript-color, 6s)
+        }
+        &.centrifugo {
+            @include skill('centrifugo', $centrifugo-color, 6s, 2s)
+        }
+        &.graphql {
+            @include skill('graphql', $graphql-color, 6s, 5s)
+        }
+        &.solid {
+            @include skill('solid', $solid-color, 6s, 8s)
+        }
+        &.react {
+            @include skill('react', $react-color, 6s, 11s)
+        }
+        &.redux {
+            @include skill('redux', $redux-color, 6s, 14s)
+        }
+        &.vanilla {
+            @include skill('vanilla', $vanilla-color, 6s, 17s)
+        }
+        &.oop {
+            @include skill('oop', $oop-color, 6s, 20s)
+        }
+        &.vue {
+            @include skill('vue',$vue-color, 6s, 23s)
+        }
+        &.vuex {
+            @include skill('vuex', $vue-color, 6s, 26s)
+        }
+        &.postcss {
+            @include skill('postcss', $postcss-color, 6s, 27s)
+        }
+        &.scss {
+            @include skill('scss', $scss-color, 6s, 28s)
+        }
+        &:hover, &:focus, &:active {
+            animation: none;
+        }
+    }
+}
+
+
