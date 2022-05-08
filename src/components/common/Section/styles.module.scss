@@ -1,0 +1,13 @@
+@use 'src/media';
+
+.section {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+@include media.for-mobiles {
+    .section {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}

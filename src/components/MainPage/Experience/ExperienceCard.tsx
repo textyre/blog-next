@@ -27,7 +27,11 @@ const ExperienceCard: React.FC<IProps> = ({
       </div>
       <h4 className={styles.work_experience}>{experience}</h4>
       <Skills.Container>
-        <Skills.Items skills={skills} isRectangleEachSecond />
+        <Skills.Items
+          className={styles.skill}
+          skills={skills}
+          isRectangleEachSecond
+        />
       </Skills.Container>
     </div>
   );

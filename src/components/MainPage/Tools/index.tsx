@@ -1,9 +1,9 @@
 import React from "react";
 import classnames from "classnames";
+import { Skills } from "@components/Skills";
+import { Title } from "@components/common/Title";
 
 import styles from "./styles.module.scss";
-import pageStyles from "../styles.module.scss";
-import { Skills } from "@components/Skills";
 
 const skills = [
   {
@@ -123,11 +123,11 @@ const skillStyles: TSkillStyles = {
 
 const Tools: React.FC = () => (
   <section>
-    <h2 className={pageStyles.main__titles}>
-      Tools <span className={pageStyles.second}> & </span>
+    <Title className={styles.title}>
+      Tools <span> & </span>
       <br />
       technologies
-    </h2>
+    </Title>
     <Skills.Container className={styles.skill_container}>
       {skills.map((skill, index) => (
         <Skills.Item

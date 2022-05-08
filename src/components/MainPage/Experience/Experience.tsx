@@ -1,17 +1,19 @@
 import React from "react";
 import { ExperienceCards } from "./ExperienceCards";
+import { Section } from "@components/common/Section";
+import { Title } from "@components/common/Title";
 
-import pageStyles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
 const Experience: React.FC = () => (
-  <section className={pageStyles.companies}>
-    <h2 className={pageStyles.main__titles}>
+  <Section>
+    <Title className={styles.title}>
       Four <span>lovely</span>
       <br />
       companies
-    </h2>
+    </Title>
     <ExperienceCards />
-  </section>
+  </Section>
 );
 
 export { Experience };

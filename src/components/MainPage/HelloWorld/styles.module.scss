@@ -1,33 +1,16 @@
 @use 'src/variables';
 @use 'src/media';
 
-.main__text {
+.section {
+    margin-top: 24px;
+}
+
+.card {
     font-size: variables.$desktop-font-size;
-    color: #04060f;
     font-weight: 700;
-    background-color: whitesmoke;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-radius: 20px;
-    margin: 24px 24px 0 24px;
 }
 
-.highlight_text {
-    border: 0.06em solid whitesmoke;
-    display: inline-block;
-    line-height: 1em;
-    border-radius: 2em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-
-    &:hover {
-        color: white;
-        cursor: pointer;
-    }
-}
-
-
-.main__text__img {
+.images {
     display: inline-block;
     position: relative;
     width: 1em;
@@ -42,12 +25,10 @@
 }
 
 @include media.for-mobiles {
-    .main__text {
-        font-size:  7vw;
-        margin: 12px 12px 0 12px;
-        padding: 0 12px 0 12px;
+    .section {
+        margin-top: 12px;
     }
-    .main__titles {
-        font-size: variables.$mobile-font-size;
+    .card {
+        font-size:  7vw;
     }
 }

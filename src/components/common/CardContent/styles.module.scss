@@ -1,0 +1,15 @@
+@use 'src/media';
+
+.card_content {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+@include media.for-mobiles {
+    .card_content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

@@ -4,9 +4,9 @@ import NNLImage from "@public/nnl.png";
 import CSMoneyImage from "@public/csmoney.png";
 import SlotexImage from "@public/SD.png";
 import OzonImage from "@public/ozon_logo.png";
+import { ExperienceCard } from "./ExperienceCard";
 
 import styles from "./styles.module.scss";
-import { ExperienceCard } from "@components/MainPage/Sections/ExperienceCard";
 
 const companies = [
   {

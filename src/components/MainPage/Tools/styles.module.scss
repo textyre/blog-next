@@ -1,3 +1,9 @@
+.title {
+    & span {
+        background-color: #76c893;
+    }
+}
+
 .skill_container {
     display: flex;
     gap: 16px;

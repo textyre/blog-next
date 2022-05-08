@@ -1,7 +1,7 @@
 @use 'src/variables';
 @use 'src/media';
 
-.main__titles {
+.title {
     font-size: variables.$desktop-font-size;
     text-align: center;
     font-weight: 700;
@@ -11,38 +11,14 @@
     & span {
         display: inline-block;
         vertical-align: middle;
-        background-color: #ff5d8f;
         border-radius: 0.8em;
         line-height: 0.9em;
         padding: 0 .3em;
     }
-
-    & .second {
-        background-color: #76c893;
-    }
-
-    & .third {
-        background-color: #724cf9;
-    }
-}
-
-.companies {
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-@mixin footer_text($font-size) {
-    font-size: $font-size;
-    font-weight: 700;
-    margin: 0;
 }
 
 @include media.for-mobiles {
-    .main__titles {
+    .title {
         font-size: variables.$mobile-main-title-font-size;
-    }
-
-    .companies {
-        margin: variables.$mobile-side-margins;
     }
 }
