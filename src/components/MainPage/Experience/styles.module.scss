@@ -177,10 +177,24 @@
 }
 
 @include media.for-small-mobiles {
+    .work_experience {
+        font-size: 4.5vw;
+    }
+
     .card_company {
+        & .images_companies {
+            width: 25vw;
+        }
+
+        &.cs_money {
+            & .images_companies {
+                width: 30vw;
+            }
+        }
+
         &.nnl {
             & .images_companies {
-                width: 15vw;
+                width: 20vw;
             }
         }
 

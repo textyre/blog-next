@@ -22,7 +22,8 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["./public/*"],
+      "@api/*": ["./src/api/*"]
     }
   },
   "include": [

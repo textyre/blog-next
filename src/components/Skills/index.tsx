@@ -69,7 +69,7 @@ const Item: React.FC<IPropsItem> = ({
   );
 
   return (
-    <span className={classname(index)} key={label} tabIndex={index}>
+    <span className={classname(index)} key={label}>
       {label}
     </span>
   );

@@ -9,7 +9,6 @@
   "rules": {
     "indent": ["error", 2],
     "semi": "error",
-    "max-len": ["error", { "code": 80, "ignoreUrls": true }],
     "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",

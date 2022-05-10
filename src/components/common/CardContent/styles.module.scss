@@ -1,15 +1,52 @@
 @use 'src/media';
 
+.card_content,
+.letter_card {
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
 .card_content {
     padding-left: 24px;
     padding-right: 24px;
-    background-color: whitesmoke;
-    border-radius: 20px;
+}
+
+.letter_card_container {
+    position: absolute;
+    left: 0;
+    margin: 0 24px 0 24px;
+}
+
+.letter_card {
+    padding: 24px;
+    margin-bottom: 24px;
+
+    & p {
+        font-size: 2vw;
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 @include media.for-mobiles {
     .card_content {
         padding-left: 12px;
         padding-right: 12px;
+    }
+
+    .letter_card_container {
+        margin: 0 12px 12px 12px;
+    }
+
+    .letter_card {
+        padding: 12px;
+        & p {
+            font-size: 6vw;
+        }
     }
 }
